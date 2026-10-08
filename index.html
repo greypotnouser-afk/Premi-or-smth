@@ -1,31 +1,27 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Premium RPG Portfolio </title>
-    
+    <title>Luxydecay</title>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-   
     <script src="https://cdn.tailwindcss.com"></script>
-   
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="text-gray-200 min-h-screen flex flex-col justify-between selection:bg-rose-500 selection:text-black">
 
    
     <header class="w-full border-b-4 border-black bg-[#131219] p-4 flex justify-between items-center z-10">
-        <h1 class="text-3xl md:text-4xl font-extrabold text-rose-500 tracking-wider"> LUX_DECAY_</h1>
+        <h1 class="text-3xl md:text-4xl font-extrabold text-rose-500 tracking-wider">LUX_DECAY</h1>
         <a href="https://github.com/greypotnouser-afk" target="_blank" rel="noopener noreferrer" class="retro-border bg-yellow-400 text-black px-4 py-2 text-xl md:text-2xl font-bold flex items-center gap-2 hover:bg-yellow-350 transition-all active:scale-95">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.137 20.164 22 16.418 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg>
-            MY GITHUB
+            GITHUB
         </a>
     </header>
 
     
     <div id="intro-overlay" class="fixed inset-0 bg-[#0d0c10] z-50 flex flex-col justify-center items-center p-4">
         <div class="retro-border bg-[#18171f] max-w-lg w-full p-6 md:p-8 text-center space-y-6">
-            <h2 class="text-4xl md:text-5xl font-black text-rose-500 animate-pulse"> A WILD BOSS APPEARS </h2>
+            <h2 class="text-4xl md:text-5xl font-black text-rose-500 animate-pulse">A WILD BOSS APPEARS</h2>
             
             <div class="flex justify-center">
                 <div class="relative retro-border bg-[#121118] p-3 w-44 h-44 flex items-center justify-center overflow-hidden">
@@ -38,34 +34,117 @@
                 <p class="text-2xl md:text-3xl text-white font-black leading-snug">"yooo welcome to ts gng 😂✌"</p>
             </div>
 
-            <p class="text-lg md:text-xl text-gray-400">Are you ready to battle the master of code and chaos?</p>
-
-            <button onclick="startGame()" class="retro-border-interactive bg-rose-600 hover:bg-rose-500 text-white w-full py-4 text-2xl md:text-3xl font-black tracking-widest transition-all">
-                 FIGHT! 
+            <button id="start-btn" onclick="startGame()" class="retro-border-interactive bg-rose-600 hover:bg-rose-500 text-white w-full py-4 text-2xl md:text-3xl font-black tracking-widest transition-all">
+                FIGHT
             </button>
         </div>
     </div>
 
-   
+
     <div id="end-overlay" class="fixed inset-0 bg-black/90 z-50 flex-col justify-center items-center p-4 hidden">
         <div id="end-box" class="retro-border max-w-md w-full p-8 text-center space-y-6 transform scale-95 transition-transform duration-300">
             <h2 id="end-title" class="text-5xl font-black tracking-widest text-red-500">GAME OVER</h2>
             <p id="end-desc" class="text-2xl md:text-3xl text-gray-300 font-bold leading-relaxed"></p>
             <div class="pt-4">
                 <button onclick="resetGame()" class="retro-border-interactive bg-yellow-400 hover:bg-yellow-350 text-black px-8 py-3 text-2xl font-black uppercase">
-                     Play Again 
+                    PLAY AGAIN
                 </button>
             </div>
         </div>
     </div>
 
-    
+   
     <main class="max-w-4xl w-full mx-auto p-4 md:py-8 space-y-8 flex-grow">
         
-       
-        <div class="retro-border bg-[#131219] p-4 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div class="retro-border bg-[#131219] p-4 flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="space-y-1 text-center md:text-left">
-                <p class="text-2xl text-rose-500 font-black tracking-wider uppercase"> Portfolio Mode active </p>
                 <h3 class="text-3xl font-black">Luxydecay (aka Premium)</h3>
-                <p class="text-lg text-gray-400">Creator of bugs, gamer, & absolute boss of this domain. Click attack if you dare.</p>
             </div>
+            <div class="flex gap-2">
+                <a href="https://github.com/greypotnouser-afk" target="_blank" class="retro-border-interactive bg-[#24292e] text-white px-4 py-2 font-bold hover:bg-[#2f363d] text-lg">GitHub</a>
+                <button onclick="alert('No resume available.')" class="retro-border-interactive bg-[#1b1a23] text-gray-300 px-4 py-2 font-bold text-lg hover:text-white border border-gray-800">Resume</button>
+            </div>
+        </div>
+
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+            
+            
+            <div id="boss-card" class="retro-border bg-[#131219] p-4 flex flex-col space-y-4 transition-all">
+                <div class="flex items-center justify-between pb-2 border-b-2 border-black">
+                    <span class="text-red-500 font-black text-2xl tracking-wider">THE BOSS</span>
+                    <span class="bg-red-950 text-red-400 border border-red-800 text-sm font-bold px-2 py-0.5">LV 999</span>
+                </div>
+
+                <div class="flex items-center gap-4">
+                 
+                    <div class="relative w-28 h-28 md:w-32 md:h-32 bg-black border-4 border-black overflow-hidden flex-shrink-0">
+                        <img id="boss-img" src="1000069968_c51c82.jpg" alt="Premium Avatar" class="w-full h-full object-cover transition-transform" onerror="handleImageError(this)">
+                    </div>
+                    <div class="flex-grow space-y-2">
+                        <h4 class="text-3xl font-extrabold text-white tracking-wide">Premium</h4>
+                        <div class="text-lg text-rose-400 font-bold flex justify-between">
+                            <span>HP: <span id="boss-hp">1000</span>/1000</span>
+                            <span id="boss-badge" class="text-sm px-1.5 py-0.2 bg-red-900/50 text-red-300 hidden font-black">ANGRY</span>
+                        </div>
+                        
+                        <div class="w-full bg-[#0d0c10] border-2 border-black p-0.5 h-6">
+                            <div id="boss-hp-bar" class="bg-gradient-to-r from-red-600 to-rose-500 h-full transition-all duration-150" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="retro-border bg-[#131219] p-4 flex flex-col space-y-4">
+                <div class="flex items-center justify-between pb-2 border-b-2 border-black">
+                    <span class="text-cyan-400 font-black text-2xl tracking-wider">YOU (VISITOR)</span>
+                    <span class="bg-cyan-950 text-cyan-400 border border-cyan-800 text-sm font-bold px-2 py-0.5">LV 1</span>
+                </div>
+
+                <div class="space-y-4 flex-grow flex flex-col justify-center">
+                    <div class="space-y-2">
+                        <div class="text-lg text-cyan-400 font-bold flex justify-between">
+                            <span>HP: <span id="player-hp">200</span>/200</span>
+                            <span id="player-status" class="text-xs tracking-widest text-emerald-400">READY</span>
+                        </div>
+                                               <div class="w-full bg-[#0d0c10] border-2 border-black p-0.5 h-6">
+                            <div id="player-hp-bar" class="bg-gradient-to-r from-cyan-600 to-emerald-400 h-full transition-all duration-150" style="width: 100%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="grid grid-cols-2 gap-3 pt-2">
+                        <button onclick="playerAttack()" id="btn-attack" class="retro-border-interactive bg-rose-600 hover:bg-rose-500 text-white font-black text-2xl py-3 tracking-widest transition-all">
+                            ATTACK
+                        </button>
+                        <button onclick="playerHeal()" id="btn-heal" class="retro-border-interactive bg-emerald-600 hover:bg-emerald-500 text-white font-black text-2xl py-3 tracking-widest transition-all relative">
+                            HEAL
+                            <span id="heal-cooldown" class="absolute inset-0 bg-black/75 flex items-center justify-center text-yellow-400 text-lg hidden">CD: 3T</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- BATTLE LOG BOX -->
+        <div class="retro-border bg-[#0a090e] p-4 space-y-2">
+            <div class="flex justify-between items-center pb-1 border-b border-zinc-800">
+                <span class="text-yellow-400 font-black text-xl tracking-widest">BATTLE LOG</span>
+            </div>
+            <div id="battle-log" class="h-44 overflow-y-auto space-y-2.5 pr-2 font-mono text-lg md:text-xl leading-snug">
+                <div class="text-yellow-500">> [SYSTEM]: Click ATTACK to pick a fight with Premium.</div>
+            </div>
+        </div>
+
+    </main>
+
+   
+FO <footer class="w-full border-t-4 border-black bg-[#0d0c10] p-4 text-center text-lg text-gray-600">
+        <p>© 2026 Luxydecay.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
