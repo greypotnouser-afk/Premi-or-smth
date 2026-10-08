@@ -1,0 +1,62 @@
+
+body {
+    font-family: 'VT323', monospace, sans-serif;
+    letter-spacing: 0.05em;
+    background-color: #0d0c10;
+    background-image: radial-gradient(#1c1b22 10%, transparent 10%);
+    background-size: 20px 20px;
+}
+
+
+.retro-border {
+    border: 4px solid #1a1921;
+    box-shadow: 4px 4px 0px #000;
+}
+
+.retro-border-interactive:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #e11d48;
+}
+
+.retro-border-interactive:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #000;
+}
+
+/* Animations */
+@keyframes shake {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    10% { transform: translate(-2px, -2px) rotate(-1deg); }
+    20% { transform: translate(3px, 1px) rotate(1deg); }
+    30% { transform: translate(-1px, 2px) rotate(0deg); }
+    40% { transform: translate(2px, -1px) rotate(1deg); }
+    50% { transform: translate(-2px, 1px) rotate(-1deg); }
+    60% { transform: translate(1px, -1px) rotate(0deg); }
+    70% { transform: translate(-1px, 2px) rotate(1deg); }
+    80% { transform: translate(2px, 1px) rotate(-1deg); }
+    90% { transform: translate(-2px, -2px) rotate(0deg); }
+}
+
+.shake-hit {
+    animation: shake 0.35s ease-in-out;
+}
+
+@keyframes flashRed {
+    0%, 100% { box-shadow: 0 0 10px rgba(220, 38, 38, 0.4); border-color: #1a1921; }
+    50% { box-shadow: 0 0 25px rgba(220, 38, 38, 0.95); border-color: #ef4444; }
+}
+
+.critical-hp-flash {
+    animation: flashRed 1s infinite alternate;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0d0c10;
+}
+::-webkit-scrollbar-thumb {
+    background: #3f3e47;
+    border: 2px solid #0d0c10;
+}
